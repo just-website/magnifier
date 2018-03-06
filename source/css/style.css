@@ -1,2 +1,14 @@
 body {
   background-color: #ccc; }
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.full {
+  width: 200px;
+  height: 200px;
+  background-image: url("../img/max.jpg");
+  background-repeat: no-repeat;
+  background-position: 0% 0%; }

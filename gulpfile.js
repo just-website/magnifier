@@ -23,7 +23,8 @@ gulp.task("style", function() {
     .pipe(gulp.dest("source/css")) //поменять на build
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("source/css")); //поменять на build
+    .pipe(gulp.dest("source/css")) //поменять на build
+    .pipe(server.stream());
 });
 
 gulp.task("images", function() {
@@ -52,6 +53,7 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
+  gulp.watch("source/js/*.js").on("change", server.reload);
   gulp.watch("source/*.html").on("change", server.reload);
 });
 
