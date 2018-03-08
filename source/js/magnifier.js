@@ -15,9 +15,8 @@ function getMetrics(ev) {
 function getSizes(arr, ev) {
     var el = ev.target.closest('img');
     if (el) {
-        heigthPercent = arr[0] / (el.clientHeight / 100) ;
-        widthPercent = arr[1] / (el.clientWidth / 100);
+        heigthPercent = arr[1] / (el.clientHeight / 100) ;
+        widthPercent = arr[0] / (el.clientWidth / 100);
     }
-    console.log(heigthPercent);
-    return heigthPercent + '% ' + widthPercent + '%';
+    return widthPercent + '% ' +  heigthPercent + '%';
 }
